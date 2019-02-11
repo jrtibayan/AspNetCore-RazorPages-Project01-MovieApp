@@ -29,3 +29,7 @@ You should now be able to do CRUD operations
 9. Troubleshoot if not working  
 If you get error `SqlException: Cannot open database "RazorPagesMovieContext-GUID" requested by the login. The login failed.
 Login failed for user 'User-name'.` - you missed migration step.
+
+10. Change the A Bunch of Stuff Applicable to the Whole App  
+Changes to the Pages/Shared/_Layout.cshtml like the value on the Title tag will be seen though out the whole app.  
+I changed the App's Title, text on the nav-brand class, and the value on the asp-page attribute which I think is where the link will go when clicked.
