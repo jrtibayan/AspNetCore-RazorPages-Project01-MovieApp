@@ -37,4 +37,11 @@ I changed the App's Title, text on the nav-brand class, and the value on the asp
 11. Examining the Create page model  
 The `OnGet` method initializes any state needed for the page. The Create page doesn't have any state to initialize, so Page is returned.  
 The `Movie` property  uses the `[BindProperty]` attribute to opt-in to model binding. When the Create form posts the form values, the ASP.NET Core runtime binds the posted values to the `Movie` model.  
-The `OnPostAsync` method is run when the page posts form data
+The `OnPostAsync` method is run when the page posts form data.
+
+12. Examining the Create Razor page  
+I just noticed that a bunch of bootstrap classes are being used and have verified that the project is using bootstrap.  
+Anyway, the scaffolding engine created a Razor markup of each field in the model. Each were contained in a div with form-group class and have a label, input and span.  
+The label of course display the name of the field and the input will be used to create new data entry.  
+The span with `Validation Message Tag Helper` displays validation message for each field.  
+There is also a div with `Validation Summary Tag Helper` on top that I think will display summary of validation errors.
