@@ -33,3 +33,8 @@ Login failed for user 'User-name'.` - you missed migration step.
 10. Changed a bunch of stuff applicable to the whole App  
 Changes to the Pages/Shared/_Layout.cshtml like the value on the Title tag will be seen though out the whole app.  
 I changed the App's Title, text on the nav-brand class, and the value on the asp-page attribute which I think is where the link will go when clicked.
+
+11. Examining the Create page model  
+The `OnGet` method initializes any state needed for the page. The Create page doesn't have any state to initialize, so Page is returned.  
+The `Movie` property  uses the `[BindProperty]` attribute to opt-in to model binding. When the Create form posts the form values, the ASP.NET Core runtime binds the posted values to the `Movie` model.  
+The `OnPostAsync` method is run when the page posts form data
